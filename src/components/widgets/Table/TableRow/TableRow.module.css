@@ -1,0 +1,12 @@
+.TableRow {
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.actionButton {
+  cursor: pointer;
+}
+
+.icon {
+  min-width: 16px;
+  min-height: 16px;
+}

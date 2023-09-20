@@ -1,0 +1,19 @@
+.NavigationBar {
+  width: 240px;
+
+  padding: 8px 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  background-color: var(--color-gray);
+
+  border-right: 2px solid var(--color-gray-dark);
+}
+
+.navigationBlocks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

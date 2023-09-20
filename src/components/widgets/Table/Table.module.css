@@ -1,0 +1,36 @@
+.Table {
+
+}
+
+.title {
+  margin-top: 16px;
+}
+
+.filterBlock {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableWrapper {
+  margin-top: 16px;
+}
+
+.paginationBlock {
+  margin-top: 16px;
+}
+
+.input {
+  width: 40%;
+}
+
+.searchButton {
+  color: var(--color-gray-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown {
+  position: relative;
+}

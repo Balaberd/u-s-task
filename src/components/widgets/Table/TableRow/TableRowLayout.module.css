@@ -1,0 +1,27 @@
+.TableRow {
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+}
+
+
+.TableRow :nth-child(n+3):not(:last-child) {
+  width: 9.5%;
+}
+
+.TableRow :nth-child(-n+2) {
+  width: 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TableRow :last-child {
+  width: 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
