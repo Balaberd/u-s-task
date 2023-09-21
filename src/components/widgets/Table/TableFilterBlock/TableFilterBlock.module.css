@@ -21,5 +21,6 @@
 }
 
 .dropdown {
-  position: relative;
+  right: 0;
+  top: calc(100% + 16px);
 }

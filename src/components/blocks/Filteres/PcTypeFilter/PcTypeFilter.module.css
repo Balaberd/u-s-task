@@ -1,0 +1,15 @@
+.PcTypeFilteres {
+  width: 370px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input {
+  display: none;
+}
+
+.input:checked~* {
+  font-weight: 700;
+}

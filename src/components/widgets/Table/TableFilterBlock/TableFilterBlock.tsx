@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FilterDropdown } from "../../../blocks/FilterDropdown/FilterDropdown";
+import { Filteres } from "../../../blocks/Filteres/Filteres";
 import { Icon } from "../../../shared";
 import { Dropdown } from "../../../shared/Dropdown/Dropdown";
 import { Input } from "../../../shared/Input/Input";
@@ -42,8 +42,9 @@ export const TableFilterBlock: React.FC<Props> = ({
                 <Icon iconName="filter" />
               </button>
             }
+            droppedBlockClassNames={styles.dropdown}
           >
-            <FilterDropdown onChange={() => {}} />
+            <Filteres />
           </Dropdown>
         }
         placeholder="Поиск"

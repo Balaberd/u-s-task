@@ -1,19 +1,20 @@
 import { ReactElement, useRef, useState, cloneElement } from "react";
 import { useClickOutside } from "./helpers/useClickOutside";
 import { mixHandlers } from "./helpers/mixHandlers";
+import cn from "classnames";
 import styles from "./Dropdown.module.css";
 
 interface Props {
   trigger: ReactElement;
   children: any;
-  dropdownWrapperClassName?: string;
+  droppedBlockClassNames?: string;
   isActive?: boolean;
 }
 
 export const Dropdown: React.FC<Props> = ({
   trigger,
   children,
-  dropdownWrapperClassName,
+  droppedBlockClassNames,
   isActive = false,
 }) => {
   const [isOpen, setIsOpen] = useState(isActive);
@@ -30,7 +31,13 @@ export const Dropdown: React.FC<Props> = ({
   return (
     <div ref={dropdownRef} className={styles.wrapper}>
       {triggerElement}
-      {isOpen && <div className={dropdownWrapperClassName}>{children}</div>}
+      {isOpen && (
+        <div
+          className={cn(styles.droppedBlockWrapper, droppedBlockClassNames)}
+        >
+          {children}
+        </div>
+      )}
     </div>
   );
 };

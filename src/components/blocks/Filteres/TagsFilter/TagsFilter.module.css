@@ -1,0 +1,14 @@
+.TagsFilter {}
+
+.tagsList {
+  margin-top: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tagItem {
+  display: flex;
+  gap: 12px;
+}

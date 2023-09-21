@@ -26,7 +26,7 @@ export const Table: React.FC<Props> = ({ title }) => {
   const filteres: IFilteres = {
     nameFilter: searchParams.get("name") || null,
     pcType: searchParams.get("pc_type") || null,
-    tags: searchParams.get("tags")?.split(" ") || null,
+    tags: searchParams.get("tags")?.split(" ") || [],
     pageSize: searchParams.get("page_size") || null,
     currentPage: searchParams.get("page") || null,
   };

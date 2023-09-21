@@ -1,0 +1,35 @@
+.Filteres {
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.title {
+  font-weight: 700;
+}
+
+.triggerButton {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 8px 16px;
+
+  color: var(--color-gray-dark);
+
+  border-radius: 4px;
+  border: 1px solid var(--color-gray-dark);
+}
+
+.droppedBlock {
+  width: 100%;
+  top: calc(100% + 16px);
+
+  z-index: 15;
+}
+
+.buttonsBlock {}
