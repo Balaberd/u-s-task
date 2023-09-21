@@ -20,7 +20,7 @@ export const TableHeader: React.FC = () => {
       <div className={styles.cell}>Дата создания</div>
       <div className={styles.cell}>Дата обновления</div>
       <div className={styles.cell}>Дата аудита</div>
-      <div className={styles.cell}>1</div>
+      <div className={styles.cell}></div>
     </div>
   );
 };

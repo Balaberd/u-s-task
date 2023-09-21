@@ -1,4 +1,6 @@
 .TableHeader {
   background-color: var(--color-gray);
+
+  font-weight: 500;
 }
 

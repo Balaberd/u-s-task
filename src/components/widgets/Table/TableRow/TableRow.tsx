@@ -3,42 +3,34 @@ import cn from "classnames";
 import styles from "./TableRow.module.css";
 import layoutStyles from "./TableRowLayout.module.css";
 import { Checkbox, Icon } from "../../../shared";
+import { ITableItem } from "../../../../lib/types/tableItem";
 
 interface Props {
   classNames?: string;
   checked: boolean;
-  status: string;
-  name: string;
-  type: string;
-  location: string;
-  unitId: string;
-  InvNumber: string;
-  tags: string;
-  createDate: string;
-  refreshDate: string;
-  auditDate: string;
+  item: ITableItem;
 }
 
-export const TableRow: React.FC<Props> = ({
-  classNames,
-  checked,
-  status,
-  name,
-  type,
-  location,
-  unitId,
-  InvNumber,
-  tags,
-  createDate,
-  refreshDate,
-  auditDate,
-}) => {
+export const TableRow: React.FC<Props> = ({ classNames, checked, item }) => {
+  const {
+    marker,
+    name,
+    type,
+    location,
+    unitId,
+    InvNumber,
+    tags,
+    createDate,
+    refreshDate,
+    auditDate,
+  } = item;
+
   return (
     <div className={cn(layoutStyles.TableRow, styles.TableRow, classNames)}>
       <div className={styles.cell}>
         <Checkbox checked={checked} onChange={() => {}} />
       </div>
-      <div className={styles.cell}>{status}</div>
+      <div className={styles.cell}>{marker}</div>
       <div className={styles.cell}>{name}</div>
       <div className={styles.cell}>{type}</div>
       <div className={styles.cell}>{location}</div>

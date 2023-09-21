@@ -1,8 +1,8 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import filteres from "./slices/filteresSlice";
+import tableItems from "./slices/tableItemsSlice";
 
 const rootReducer = combineReducers({
-  filteres,
+  tableItems,
 });
 
 export const setupStore = () => {
