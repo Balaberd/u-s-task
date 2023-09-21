@@ -1,7 +1,7 @@
 export const TABLE_ITEMS_MOCK = [
   {
     status: "",
-    name: "Ivan",
+    name: "Иван",
     type: "",
     location: "location",
     unitId: "unitId",
@@ -13,7 +13,7 @@ export const TABLE_ITEMS_MOCK = [
   },
   {
     status: "",
-    name: "Petr",
+    name: "Сергей",
     type: "type",
     location: "location",
     unitId: "unitId",
@@ -25,7 +25,7 @@ export const TABLE_ITEMS_MOCK = [
   },
   {
     status: "",
-    name: "Grisha",
+    name: "Петр",
     type: "",
     location: "location",
     unitId: "unitId",
