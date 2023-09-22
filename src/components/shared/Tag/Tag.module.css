@@ -1,0 +1,21 @@
+.Tag {
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+
+.Tag_red {
+  background-color: red;
+}
+
+.Tag_blue {
+  background-color: blue;
+}
+
+.Tag_green {
+  background-color: green;
+}
+
+.Tag_orange {
+  background-color: orange;
+}

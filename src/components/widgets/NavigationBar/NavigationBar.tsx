@@ -9,7 +9,7 @@ export const NavigationBar: React.FC = () => {
       <LogoBlock />
       <div className={styles.navigationBlocks}>
         {navigationMenu.map((menu) => (
-          <NavigationBlock navigationMenuBlock={menu} />
+          <NavigationBlock key={menu.title} navigationMenuBlock={menu} />
         ))}
       </div>
     </div>

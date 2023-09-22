@@ -6,11 +6,11 @@
 }
 
 
-.TableRow :nth-child(n+3):not(:last-child) {
+.TableRow> :nth-child(n+3):not(:last-child) {
   width: 9.5%;
 }
 
-.TableRow :nth-child(-n+2) {
+.TableRow> :nth-child(-n+2) {
   width: 5%;
 
   display: flex;
@@ -18,7 +18,7 @@
   justify-content: center;
 }
 
-.TableRow :last-child {
+.TableRow > :last-child {
   width: 5%;
 
   display: flex;

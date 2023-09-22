@@ -16,8 +16,8 @@ export const PcTypeFilter: React.FC<Props> = ({
     <div className={cn(styles.PcTypeFilteres, classNames)}>
       <label className={styles.label}>
         <input
-          checked={currentType === "default"}
-          onChange={(e) => changeType(e.currentTarget.id)}
+          checked={currentType === ""}
+          onChange={(e) => changeType("")}
           className={styles.input}
           type="radio"
           name="type"

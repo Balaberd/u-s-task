@@ -3,6 +3,8 @@ import { Filteres } from "../../../blocks/Filteres/Filteres";
 import { Icon } from "../../../shared";
 import { Dropdown } from "../../../shared/Dropdown/Dropdown";
 import { Input } from "../../../shared/Input/Input";
+import { IFilteres } from "../../../../lib/types/filteres";
+
 import cn from "classnames";
 import styles from "./TableFilterBlock.module.css";
 
@@ -10,12 +12,14 @@ interface Props {
   value: string;
   setSearchNameParam: any;
   totalCount: number;
+  filteres: IFilteres;
 }
 
 export const TableFilterBlock: React.FC<Props> = ({
   value,
   setSearchNameParam,
   totalCount,
+  filteres,
 }) => {
   const [inputValue, setInputValue] = useState(value);
 
@@ -44,7 +48,7 @@ export const TableFilterBlock: React.FC<Props> = ({
             }
             droppedBlockClassNames={styles.dropdown}
           >
-            <Filteres />
+            <Filteres filteres={filteres} />
           </Dropdown>
         }
         placeholder="Поиск"

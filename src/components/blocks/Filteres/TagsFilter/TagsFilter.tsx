@@ -5,14 +5,19 @@ import styles from "./TagsFilter.module.css";
 
 const TAGS_LIST: TFilterTag[] = ["red", "blue", "green", "orange"];
 
-export const TagsFilter = () => {
+interface Props {
+  tags: string[];
+  changeTags: (tag: string) => void;
+}
+
+export const TagsFilter: React.FC<Props> = ({ tags, changeTags }) => {
   const [value, setValue] = useState("");
 
   const handleValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
-  const filteredTags = TAGS_LIST.filter(tag => tag.includes(value))
+  const filteredTags = TAGS_LIST.filter((tag) => tag.includes(value));
 
   return (
     <div className={styles.TagsFilter}>
@@ -25,7 +30,11 @@ export const TagsFilter = () => {
       <div className={styles.tagsList}>
         {filteredTags.map((tag) => (
           <label key={tag} className={styles.tagItem}>
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              defaultChecked={tags.includes(tag)}
+              onChange={() => changeTags(tag)}
+            />
             <span>{tag}</span>
           </label>
         ))}

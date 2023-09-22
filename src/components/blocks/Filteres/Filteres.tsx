@@ -1,30 +1,47 @@
 import React, { useState } from "react";
 import { Dropdown } from "../../shared/Dropdown/Dropdown";
-import styles from "./Filteres.module.css";
 import { PcTypeFilter } from "./PcTypeFilter/PcTypeFilter";
 import { TagsFilter } from "./TagsFilter/TagsFilter";
+import { IFilteres } from "../../../lib/types/filteres";
+import { useSearchParams } from "react-router-dom";
+import cn from "classnames";
+import styles from "./Filteres.module.css";
 
-interface Props {}
+interface Props {
+  filteres: IFilteres;
+}
 
-export const Filteres: React.FC<Props> = () => {
-  const [filter, setFilter] = useState({ pcType: "default", tags: [] });
+export const Filteres: React.FC<Props> = ({ filteres }) => {
+  const [newFilteres, setNewFilteres] = useState(filteres);
+  const [_, setSearchParams] = useSearchParams();
 
   const handleChangePcType = (newType: string) => {
-    if (filter.pcType === newType) {
+    if (newFilteres.pc_type === newType) {
       return;
     } else {
-      setFilter({ ...filter, pcType: newType });
+      setNewFilteres({ ...newFilteres, pc_type: newType });
     }
-    console.log("NEW TYPE:", filter.pcType);
   };
 
-  // const handleChangeTags = (newTag: string) => {
-  //   if (tagList.includes(newTag)) {
-  //     setFilter(filter.tags.filter((tag) => tag !== newTag));
-  //   } else {
-  //     setFilter({ ...filter, tags: [...filter.tags, newTag] });
-  //   }
-  // };
+  const tags = newFilteres.tags ? newFilteres.tags.split(" ") : [];
+
+  const handleChangeTags = (tag: string) => {
+    let newTags;
+    if (tags.includes(tag)) {
+      newTags = tags.filter((el) => tag !== el).join(" ");
+    } else {
+      newTags = [...tags, tag].join(" ");
+    }
+    setNewFilteres({ ...newFilteres, tags: newTags });
+  };
+
+  const handleSetFilteres = () => {
+    setSearchParams({ ...newFilteres });
+  };
+
+  const resetNewFilteres = () => {
+    setNewFilteres(filteres);
+  };
 
   return (
     <div className={styles.Filteres}>
@@ -34,10 +51,14 @@ export const Filteres: React.FC<Props> = () => {
         Тип ПК
         <Dropdown
           droppedBlockClassNames={styles.droppedBlock}
-          trigger={<button className={styles.triggerButton}>Выбрать</button>}
+          trigger={
+            <button className={styles.triggerButton}>
+              {newFilteres.pc_type ?? "Выбрать"}
+            </button>
+          }
         >
           <PcTypeFilter
-            currentType={filter.pcType}
+            currentType={newFilteres.pc_type}
             changeType={handleChangePcType}
           />
         </Dropdown>
@@ -47,15 +68,31 @@ export const Filteres: React.FC<Props> = () => {
         Теги
         <Dropdown
           droppedBlockClassNames={styles.droppedBlock}
-          trigger={<button className={styles.triggerButton}>Выбрать</button>}
+          trigger={
+            <button className={styles.triggerButton}>
+              {newFilteres.tags
+                ? newFilteres.tags.split(" ").join(", ")
+                : "Выбрать"}
+            </button>
+          }
         >
-          <TagsFilter />
+          <TagsFilter tags={tags} changeTags={handleChangeTags} />
         </Dropdown>
       </div>
 
       <div className={styles.buttonsBlock}>
-        <button>Применить</button>
-        <button>Сбросить</button>
+        <button
+          className={cn(styles.actionButton, styles.actionButton_apply)}
+          onClick={handleSetFilteres}
+        >
+          Применить
+        </button>
+        <button
+          className={cn(styles.actionButton, styles.actionButton_cancel)}
+          onClick={resetNewFilteres}
+        >
+          Сбросить
+        </button>
       </div>
     </div>
   );

@@ -24,15 +24,15 @@ export const Table: React.FC<Props> = ({ title }) => {
   }, []);
 
   const filteres: IFilteres = {
-    nameFilter: searchParams.get("name") || null,
-    pcType: searchParams.get("pc_type") || null,
-    tags: searchParams.get("tags")?.split(" ") || [],
-    pageSize: searchParams.get("page_size") || null,
-    currentPage: searchParams.get("page") || null,
+    name: searchParams.get("name") || "",
+    pc_type: searchParams.get("pc_type") || "",
+    tags: searchParams.get("tags") || "",
+    page_size: searchParams.get("page_size") || "",
+    page: searchParams.get("page") || "",
   };
 
   const handleSetNameSearchParam = debounce(
-    (newValue) => setSearchParams({ name: newValue }),
+    (newValue) => setSearchParams({ ...filteres, name: newValue }),
     700
   );
 
@@ -44,8 +44,9 @@ export const Table: React.FC<Props> = ({ title }) => {
       <Breadсrumbs />
       <h2 className={styles.title}>{title}</h2>
       <TableFilterBlock
+        filteres={filteres}
         totalCount={filteredItems.length}
-        value={filteres.nameFilter ?? ""}
+        value={filteres.name ?? ""}
         setSearchNameParam={handleSetNameSearchParam}
       />
       <div className={styles.tableWrapper}>
