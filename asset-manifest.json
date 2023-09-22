@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Balaberd/u-s-task/settings/pages/static/css/main.54a006cb.css",
-    "main.js": "/Balaberd/u-s-task/settings/pages/static/js/main.90452bbb.js",
-    "static/js/787.314e0817.chunk.js": "/Balaberd/u-s-task/settings/pages/static/js/787.314e0817.chunk.js",
-    "static/media/settings.svg": "/Balaberd/u-s-task/settings/pages/static/media/settings.49b2170848aa1a833663ff49582b6334.svg",
-    "index.html": "/Balaberd/u-s-task/settings/pages/index.html",
-    "static/media/database.svg": "/Balaberd/u-s-task/settings/pages/static/media/database.8c0ea5ecabcb026e1ae36dd84ad34d16.svg",
-    "static/media/dots.svg": "/Balaberd/u-s-task/settings/pages/static/media/dots.c99fcf26e25d1be7a8472c8ed3ff171c.svg",
-    "static/media/search.svg": "/Balaberd/u-s-task/settings/pages/static/media/search.82d3481840537f55a197ec3b7d2e44f5.svg",
-    "static/media/filter.svg": "/Balaberd/u-s-task/settings/pages/static/media/filter.54569751e4156e1856d6d72f9b356d3c.svg",
-    "static/media/arrowRightS.svg": "/Balaberd/u-s-task/settings/pages/static/media/arrowRightS.73dbd424fe8a6b3e3f925a44789947ed.svg",
-    "static/media/arrowRightM.svg": "/Balaberd/u-s-task/settings/pages/static/media/arrowRightM.fa18ae9d984a5d6448c255baff612ad3.svg",
-    "main.54a006cb.css.map": "/Balaberd/u-s-task/settings/pages/static/css/main.54a006cb.css.map",
-    "main.90452bbb.js.map": "/Balaberd/u-s-task/settings/pages/static/js/main.90452bbb.js.map",
-    "787.314e0817.chunk.js.map": "/Balaberd/u-s-task/settings/pages/static/js/787.314e0817.chunk.js.map"
+    "main.css": "/Balaberd/u-s-task/static/css/main.f0123c82.css",
+    "main.js": "/Balaberd/u-s-task/static/js/main.6202614f.js",
+    "static/js/787.314e0817.chunk.js": "/Balaberd/u-s-task/static/js/787.314e0817.chunk.js",
+    "static/media/settings.svg": "/Balaberd/u-s-task/static/media/settings.49b2170848aa1a833663ff49582b6334.svg",
+    "index.html": "/Balaberd/u-s-task/index.html",
+    "static/media/database.svg": "/Balaberd/u-s-task/static/media/database.8c0ea5ecabcb026e1ae36dd84ad34d16.svg",
+    "static/media/dots.svg": "/Balaberd/u-s-task/static/media/dots.c99fcf26e25d1be7a8472c8ed3ff171c.svg",
+    "static/media/search.svg": "/Balaberd/u-s-task/static/media/search.82d3481840537f55a197ec3b7d2e44f5.svg",
+    "static/media/filter.svg": "/Balaberd/u-s-task/static/media/filter.54569751e4156e1856d6d72f9b356d3c.svg",
+    "static/media/arrowRightS.svg": "/Balaberd/u-s-task/static/media/arrowRightS.73dbd424fe8a6b3e3f925a44789947ed.svg",
+    "static/media/arrowRightM.svg": "/Balaberd/u-s-task/static/media/arrowRightM.fa18ae9d984a5d6448c255baff612ad3.svg",
+    "main.f0123c82.css.map": "/Balaberd/u-s-task/static/css/main.f0123c82.css.map",
+    "main.6202614f.js.map": "/Balaberd/u-s-task/static/js/main.6202614f.js.map",
+    "787.314e0817.chunk.js.map": "/Balaberd/u-s-task/static/js/787.314e0817.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54a006cb.css",
-    "static/js/main.90452bbb.js"
+    "static/css/main.f0123c82.css",
+    "static/js/main.6202614f.js"
   ]
 }
