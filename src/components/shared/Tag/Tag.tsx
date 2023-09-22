@@ -12,5 +12,5 @@ export const Tag: React.FC<Props> = ({ tag }) => {
 
   const tagPropStyle = `Tag_${tag}`;
 
-  return <div className={cn(styles.Tag, styles[tagPropStyle])}>{tag}</div>;
+  return <div style={{backgroundColor: tag}} className={cn(styles.Tag, styles[tagPropStyle])}>{tag}</div>;
 };
