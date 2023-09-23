@@ -29,9 +29,16 @@ export const TableFilterBlock: React.FC<Props> = ({
     setSearchNameParam(newValue);
   };
 
+  const firstItemNumber =
+    +filteres.page * +filteres.page_size - +filteres.page_size + 1;
+  const endIRange = firstItemNumber + +filteres.page_size - 1;
+  const lastItemNumber = endIRange >= totalCount ? totalCount : endIRange;
+
   return (
     <div className={styles.TableFilterBlock}>
-      <div className={styles.counter}>{totalCount} записи</div>
+      <div
+        className={styles.counter}
+      >{`Записи ${firstItemNumber} - ${lastItemNumber} из ${totalCount}`}</div>
       <Input
         classNames={styles.input}
         prefix={

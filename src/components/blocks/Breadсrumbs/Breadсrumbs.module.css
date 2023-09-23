@@ -1,0 +1,12 @@
+.Breadсrumbs {
+  display: flex;
+  gap: 8px;
+
+  font-size: 14px;
+
+  color: var(--color-gray-dark);
+}
+
+.crumb_active {
+  font-weight: 700;
+}

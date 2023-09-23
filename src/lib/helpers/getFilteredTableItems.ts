@@ -11,7 +11,9 @@ export const getFilteredTableItems = (
   const result = [];
 
   for (let i = 0; i < itemsList.length; i++) {
-    if (name && itemsList[i].name !== name) {
+
+    const itemName = itemsList[i].name.toLowerCase();
+    if (name && !itemName.includes(name.toLocaleLowerCase())) {
       continue;
     }
 

@@ -7,6 +7,8 @@
 .counter {
   display: flex;
   align-items: center;
+  font-size: 14px;
+  color: var(--color-gray-dark);
 }
 
 .input {

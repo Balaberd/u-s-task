@@ -19,7 +19,7 @@ export const Filteres: React.FC<Props> = ({ filteres }) => {
     if (newFilteres.pc_type === newType) {
       return;
     } else {
-      setNewFilteres({ ...newFilteres, pc_type: newType });
+      setNewFilteres({ ...newFilteres, pc_type: newType, page: "1" });
     }
   };
 
@@ -32,7 +32,7 @@ export const Filteres: React.FC<Props> = ({ filteres }) => {
     } else {
       newTags = [...tags, tag].join(" ");
     }
-    setNewFilteres({ ...newFilteres, tags: newTags });
+    setNewFilteres({ ...newFilteres, tags: newTags, page: "1" });
   };
 
   const handleSetFilteres = () => {

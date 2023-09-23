@@ -31,7 +31,18 @@
   flex-direction: column;
 
   position: relative;
+}
 
+.subtitleList::before {
+  content: "";
+  height: calc(100% - 16px);
+
+  position: absolute;
+
+  top: 0;
+  left: 8px;
+
+  border-left: 2px solid var(--color-gray-dark);
 }
 
 .link {

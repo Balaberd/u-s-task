@@ -13,6 +13,7 @@ interface Props {
 
 export const TableRow: React.FC<Props> = ({ classNames, checked, item }) => {
   const {
+    id,
     marker,
     name,
     type,
@@ -37,7 +38,7 @@ export const TableRow: React.FC<Props> = ({ classNames, checked, item }) => {
       <div className={styles.cell}>{name}</div>
       <div className={styles.cell}>{type}</div>
       <div className={styles.cell}>{location}</div>
-      <div className={styles.cell}>{unitId}</div>
+      <div className={styles.cell}>{`ID: ${id}`}</div>
       <div className={styles.cell}>{InvNumber}</div>
       <div className={styles.cell}>
         <Tag tag={firstTag} />
